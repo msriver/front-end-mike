@@ -1,0 +1,37 @@
+.header {
+  display: flex;
+  top: 0px;
+  left: 1px;
+  width: 1440px;
+  height: 121px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 0px rgba(0,0,0,0.08);
+}
+.inputWidth {
+  width: 20% !important;
+}
+.text {
+  color: #030303;
+  font-size: 40px;
+  font-family: 'Monserrat';
+  font-weight: 700;
+  line-height: 52px;
+}
+.input {
+  top: 32px;
+  left: 335px;
+  width: 428px;
+  height: 42px;
+  padding: 0px 8px;
+  border: 1px solid #dddddd;
+  boxSizing: border-box;
+  borderRadius: 24px;
+  boxShadow: 0px 1px 2px rgba(0,0,0,0.08);
+  backgroundColor: #ffffff;
+  color: #232323;
+  fontSize: 14px;
+  fontFamily: Montserrat;
+  fontWeight: 500;
+  lineHeight: 18px;
+  outline: none;
+}

@@ -1,4 +1,4 @@
-import styles from '@/components/commons/LandingStyles.module.css'
+import styles from '@/styles/LandingStyles.module.css'
 
 const CourseCardItem = (props) => {
   return (
