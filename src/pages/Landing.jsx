@@ -2,6 +2,9 @@
 import RecommendedCourses from '../components/landing/RecommendedCourses'
 import Courses from '../components/landing/Courses'
 
+//React-bootstrap
+import Stack from 'react-bootstrap/Stack';
+
 const popularLocations = [
   {imgUrl: '@/assets/sampleCardImage.jpeg', no: 1, locationName: 'Mega Coffee', shortDescription: '맛있는 커피와 빵을 즐길 수 있다!'},
   {imgUrl: '@/assets/sampleCardImage.jpeg', no: 2, locationName: '낙산 공원', shortDescription: '야경이 좋다.'},
@@ -19,25 +22,26 @@ const recentlyAddedLocations = [
 const firstSectionTitle = 'xxx구의 인기 코스';
 const secondSectionTitle = '최근 올라온 코스';
 
-const Landing = () => {
+const Landing = (props) => {
 
   return (
-    <div>
+    <Stack gap={5}>
+      {/** 해당 User의 MBTI 맞춤 코스 */}
+      <RecommendedCourses />
 
-      <div className="container">
-        <RecommendedCourses />
-      </div>
+      {/** 해당 구의 인기 코스 */}
+      <Courses 
+          title={firstSectionTitle} 
+          locations={popularLocations} 
+      />
 
-      <div className="mt-5">
-        <Courses title={firstSectionTitle} locations={popularLocations} />
-      </div>
-
-      <div className="mt-5">
-        <Courses title={secondSectionTitle} locations={recentlyAddedLocations} />
-      </div>
-
-    </div>
+      {/** 최근 올라온 코스 */}
+      <Courses 
+          title={secondSectionTitle} 
+          locations={recentlyAddedLocations} 
+      />
+    </Stack>
   )
 }
 
-export default Landing
+export default Landing;
