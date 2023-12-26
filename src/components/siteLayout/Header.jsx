@@ -27,37 +27,54 @@ const Header = () => {
   const [user] = useState({name: '강민성'});
 
   return (
-
     <Navbar expand="lg" className="bg-transparent mb-5">
-      <Container>
+      <Container fluid>
         <Navbar.Brand href="#home">
           <img
             alt="our brand logo"
             src="/src/assets/b3f2_brand_resized.png"
-            width="60"
-            height="60"
+            width="30"
+            height="30"
             className="d-inline-block align-top"
           />{' '}
-          <span className={styles.Text}>어디갈까?</span>
+          어디갈까?
         </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+        <Navbar.Collapse id="basic-navbar-nav">
+          <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Search"
+              className="me-2"
+              aria-label="Search"
+            />
+          </Form>
 
-        <Form inline>
-          <InputField />
-        </Form>
+          <Nav className="justify-content-end flex-grow-1 pe-3">
+            <Nav.Link href="#deets">
+              커뮤니티
+            </Nav.Link>
+            <Nav.Link eventKey={2} href="#memes">
+              코스 찾기
+            </Nav.Link>
 
-        <Nav className="justify-content-end">
-          <Nav.Item>
-            <Nav.Link href="#features">내 코스</Nav.Link>
-          </Nav.Item>
-          
-          <Nav.Item>
-            <Nav.Link href="#pricing">커뮤니티</Nav.Link>
-          </Nav.Item>
-        </Nav>
-
-        <Navbar.Text>
-          <a href="#login">Mark Otto</a>
-        </Navbar.Text>
+            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">
+                내 정보 보기
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                내가 쓴 글 보기
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">
+                Something
+              </NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                로그아웃
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+        </Navbar.Collapse>
       </Container>
     </Navbar>
   )
