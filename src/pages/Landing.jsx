@@ -22,7 +22,7 @@ const recentlyAddedLocations = [
 const firstSectionTitle = 'xxx구의 인기 코스';
 const secondSectionTitle = '최근 올라온 코스';
 
-const Landing = (props) => {
+const Landing = () => {
 
   return (
     <Stack gap={5}>
