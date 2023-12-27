@@ -4,6 +4,7 @@ import Landing from './pages/Landing';
 import Layout from './components/siteLayout/Layout';
 import LocationList from './pages/LocationList';
 import CommunityBoard from './pages/CommunityBoard';
+import Login from './pages/Login';
 
 const Router = () => {
   return (
@@ -13,6 +14,8 @@ const Router = () => {
         <Route path="/community" element={<CommunityBoard />} />
         <Route path="/location-list" element={<LocationList />} />
       </Route>
+
+      <Route path="/login" element={<Login />} />
     </Routes>
   )
 }
