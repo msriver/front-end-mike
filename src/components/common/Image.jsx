@@ -10,7 +10,7 @@ const defaultProps = {
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
   }
-}
+};
 
 const Image = (props) => {
   const imageStyle = props.styles ? props.styles : defaultProps.styles;

@@ -24,14 +24,14 @@
   height: 42px;
   padding: 0px 8px;
   border: 1px solid #dddddd;
-  boxSizing: border-box;
-  borderRadius: 24px;
-  boxShadow: 0px 1px 2px rgba(0,0,0,0.08);
-  backgroundColor: #ffffff;
+  box-sizing: border-box;
+  border-radius: 24px;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.08);
+  background-color: #ffffff;
   color: #232323;
-  fontSize: 14px;
-  fontFamily: Montserrat;
-  fontWeight: 500;
-  lineHeight: 18px;
+  font-size: 14px;
+  font-family: Montserrat;
+  font-weight: 500;
+  line-height: 18px;
   outline: none;
 }
