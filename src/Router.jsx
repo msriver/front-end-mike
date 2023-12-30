@@ -1,9 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
 
-import Landing from './pages/Landing';
 import Layout from './components/siteLayout/Layout';
+import SignUpLayout from './components/siteLayout/SignUpAndLoginLayout';
+
+import Landing from './pages/Landing';
 import LocationList from './pages/LocationList';
 import CommunityBoard from './pages/CommunityBoard';
+import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 
 const Router = () => {
@@ -15,7 +18,10 @@ const Router = () => {
         <Route path="/location-list" element={<LocationList />} />
       </Route>
 
-      <Route path="/login" element={<Login />} />
+      <Route element={<SignUpLayout />}>
+        <Route path="/sign-up" element={<SignUp />} />
+        <Route path="/login" element={<Login />} />
+      </Route>
     </Routes>
   )
 }
