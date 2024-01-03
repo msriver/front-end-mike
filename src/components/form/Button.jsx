@@ -25,7 +25,7 @@ const defaultProps = {
 
 const Button = (props) => {
   return (
-    <button style={styles.Button}>
+    <button onClick={props.clickAction ? props.clickAction : ''} style={styles.Button}>
       {props.label ?? defaultProps.label}
     </button>
   );

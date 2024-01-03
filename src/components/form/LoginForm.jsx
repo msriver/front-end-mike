@@ -6,7 +6,6 @@ const LoginForm = () => {
   return (
     <div className="h-100 d-flex text-black">
       <div className="w-75 m-auto p-3">
-
         <div className="align-middle text-center">
           <h2>Login</h2>
           Discover unforgettable dates in Seoul
@@ -47,6 +46,10 @@ const LoginForm = () => {
 
         <div className="text-center mt-5">
           Social Login buttons will be here. In development...
+        </div>
+
+        <div className="text-center mt-5">
+          회원이 아니신가요? <Link to="/sign-up">회원가입 페이지로 이동</Link>
         </div>
       </div>
     </div>

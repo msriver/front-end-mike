@@ -9,6 +9,8 @@ import CommunityBoard from './pages/CommunityBoard';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 
+
+
 const Router = () => {
   return (
     <Routes>
