@@ -16,14 +16,14 @@ const SignUpForm = () => {
 
   useEffect(() => {
     return () => {
-      dispatchUserInfo({})
+      dispatchUserInfo({type: 'CLEAR_SIGNUP_INFO'})
     };
   }, []);
 
   const onChangeEventHandler = (e) => {
     const fieldName = e.target.dataset.fieldName;
     const fieldValue = e.target.value;
-    dispatchUserInfo({type: 'SET_USER_INFO', fieldName, fieldValue});
+    dispatchUserInfo({type: 'SET_SIGNUP_INFO', fieldName, fieldValue});
   };
 
   const setIsTermsAgreed = (e) => {
@@ -156,6 +156,7 @@ const SignUpForm = () => {
               label="MBTI"
               placeholder="당신의 MBTI를 선택해주세요."
               inputId="MBTI"
+              data-field-name="mbti"
               required
             />
           </div>
@@ -166,11 +167,11 @@ const SignUpForm = () => {
               label="성별"
               placeholder="성별을 선택해주세요"
               inputId="Gender"
+              data-field-name="gender"
               required
             />
           </div>
         </div>
-
 
         <div className="form-check mt-5">
           <input 

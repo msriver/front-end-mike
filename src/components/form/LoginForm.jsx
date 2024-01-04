@@ -1,58 +1,77 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import Button from './Button'
 
 const LoginForm = () => {
+  
+
   return (
-    <div className="h-100 d-flex text-black">
-      <div className="w-75 m-auto p-3">
-        <div className="align-middle text-center">
-          <h2>Login</h2>
-          Discover unforgettable dates in Seoul
-        </div>
-
-        <div className="mt-5">
-          <label htmlFor="EmailInput" className="form-label">Email</label>
-          <input 
-            type="email" 
-            className="form-control" 
-            id="EmailInput" 
-            placeholder="name@example.com" 
-          />
-        </div>
-
-        <div className="mt-3">
-          <label htmlFor="Password" className="form-label">비밀번호</label>
-          <input type="password" className="form-control" id="Password" />
-        </div>
-
-        <div className="mt-3 d-flex justify-content-between">
-          <div className="form-check">
-            <input className="form-check-input" type="checkbox" value="" id="flexCheckChecked" />
-            <label className="form-check-label" htmlFor="flexCheckChecked">
-              자동 로그인
-            </label>
-          </div>
-          <div>
-            아이디/비밀번호 찾기
-          </div>
-        </div>
-
-        <div className="text-center mt-3">
-          <Button />
-        </div>
-
-        <div className="hr-sect mt-3">or</div>
-
-        <div className="text-center mt-5">
-          Social Login buttons will be here. In development...
-        </div>
-
-        <div className="text-center mt-5">
-          회원이 아니신가요? <Link to="/sign-up">회원가입 페이지로 이동</Link>
-        </div>
+    <form>
+      {/* Email input */}
+      <div className="form-outline mb-4">
+        <input
+          type="email"
+          id="form1Example13"
+          className="form-control form-control-lg"
+        />
+        <label className="form-label" htmlFor="form1Example13">
+          Email
+        </label>
       </div>
-    </div>
+      {/* Password input */}
+      <div className="form-outline mb-4">
+        <input
+          type="password"
+          id="form1Example23"
+          className="form-control form-control-lg"
+        />
+        <label className="form-label" htmlFor="form1Example23">
+          Password
+        </label>
+      </div>
+      <div className="d-flex justify-content-around align-items-center mb-4">
+        {/* Checkbox */}
+        <div className="form-check">
+          <input
+            className="form-check-input"
+            type="checkbox"
+            defaultValue=""
+            id="form1Example3"
+            defaultChecked=""
+          />
+          <label className="form-check-label" htmlFor="form1Example3">
+            {" "}
+            자동로그인{" "}
+          </label>
+        </div>
+        <a href="#!">패스워드 찾기</a>
+      </div>
+      {/* Submit button */}
+      <button type="submit" className="btn btn-primary btn-lg btn-block">
+        로그인
+      </button>
+      <div className="divider d-flex align-items-center my-4">
+        <p className="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+      </div>
+        <button
+          className="btn btn-primary btn-lg btn-block"
+          style={{ 
+              backgroundColor: "#FEE500", 
+              backgroundImage: 'url(/src/assets/kakao_login_medium_wide.png)',
+              backgroundPosition: 'center center',
+              backgroundRepeat: 'no-repeat'
+            }}
+        >
+          <span style={{visibility: 'hidden'}}>Kakao Login</span>
+        </button>
+        {/* <a
+          className="btn btn-primary btn-lg btn-block"
+          style={{ backgroundColor: "#55acee" }}
+          href="#!"
+          role="button"
+        >
+          <i className="fab fa-twitter me-2" />
+        Continue with Twitter
+      </a> */}
+    </form>
   )
 }
 
