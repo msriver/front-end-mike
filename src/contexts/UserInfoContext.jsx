@@ -39,7 +39,7 @@ const initialCurrentUserInfo = {
 const initialUserInfo = {
   signupData: initialSignUpData,
   currentUserData: initialCurrentUserInfo,
-  isLoggedIn: false
+  isLoggedIn: true
 };
 
 const userInfoReducer = (state, action) => {
@@ -54,6 +54,11 @@ const userInfoReducer = (state, action) => {
       };
     case 'CLEAR_SIGNUP_INFO':
       return initialUserInfo;
+    case 'LOGOUT':
+      return {
+        ...state,
+        isLoggedIn: false
+      }
     default:
       throw new Error('Invalid action type');
   }

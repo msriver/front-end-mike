@@ -30,7 +30,7 @@ const RecommendedCourses = () => {
         </Col>
         <Col>
           <div className={`pt-3 px-3 ${styles['card']}`}>
-            <div className={`mb-3 ${styles[`card-header-text`]}`}>장소 목록:</div>
+            <div className={`mb-3 ${styles[`card-header-text`]}`}>추천 장소 목록:</div>
             <CourseList locations={locations} />
           </div>
         </Col>

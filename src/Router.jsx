@@ -9,6 +9,8 @@ import CommunityBoard from './pages/CommunityBoard';
 import SignUp from './pages/SignUp';
 import Login from './pages/Login';
 
+import Header from './components/common/Header';
+
 const Router = () => {
   return (
     <Routes>
@@ -22,6 +24,9 @@ const Router = () => {
         <Route path="/sign-up" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
       </Route>
+
+      <Route path='/headertest' element={<Header />} />
+
     </Routes>
   )
 }

@@ -1,5 +1,20 @@
+@font-face {
+  font-family: 'NanumSquareNeo';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/src/assets/NanumSquareNeoTTF-bRg.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'NanumSquareNeo';
+  font-style: bold;
+  font-weight: 700;
+  src: url('/src/assets/NanumSquareNeoTTF-cBd.woff2') format('woff2');
+}
+
 body {
-  font-family: Roboto, Helvetica, Arial, sans-serif;
+  font-family: 'NanumSquareNeo' !important;
+  font-weight: 700;
 }
 .divider:after,
 .divider:before {
